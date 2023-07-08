@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-white: hsl(0, 0%, 100%);
+  --bg-blue-100: hsl(196, 100%, 98%);
+  --bg-blue-500: hsl(195, 46%, 40%);
+  --bg-blue-900: hsl(195, 91%, 25%);
+  --fc-gray-500: hsl(240, 5%, 7%);
+  --fc-gray-900: hsl(240, 6%, 13%);
+}
+
+html, body, input {
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--bg-blue-900);
+}
+
+main {
+  background-color: var(--bg-white);
+
+  display: grid;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 1.2rem 2.8rem;
+}
+
+header form {
+  flex: 1;
+
+  margin: 0 2.4rem;
+}
+
+header .logo {
+  padding: 0.8rem;
+  background-color: var(--bg-blue-100);
+  width: 4.0rem;
+  height: 4.0rem;
+  border-radius: 50%;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.4rem 1.2rem;
+
+  background-color: var(--bg-blue-500);
+  border: 0;
+  border-radius: 0.4rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--bg-white);
+}
+
+header .avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+/*page*/
+.page {
+  padding: 3.2rem 2.2rem;
+}
+
+.page2 {
+  padding: 0 2.2rem 3.2rem;
+}
+
+img .first {
+  width: 100%;
+
+  object-fit: fill;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--fc-gray-900);
+
+  margin-top: 3.2rem;
+}
+
+button {
+  margin-top: 0.8rem;
+  margin-right: 1.2rem;
+  padding: 1.2rem;
+
+  background-color: var(--bg-blue-900);
+  border: 0;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: var(--bg-blue-500);
+}
+
+.page p {
+  margin-top: 3.0rem;
+  min-width: 38.2rem;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.item {
+  margin-top: 3.2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.page2 p {
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  width: 21.5rem;
+  margin-top: 1.4rem;
+}
+
+footer {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--bg-white);
+  text-align: center;
+
+  padding: 2.6rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-areas: "A A B";
+    gap: 2.0rem;
+  }
+
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+}
